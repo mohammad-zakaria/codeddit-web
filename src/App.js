@@ -3,6 +3,12 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import data from '../src/data/data.json'
 import Home from './components/Home/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [landingPageData, setLandingPageData] = useState({});
@@ -10,9 +16,13 @@ function App() {
     setLandingPageData(data);
   }, []);
   return (
-    <div className="App">
-      <Home data={landingPageData}></Home>
-    </div>
+    <Router className="App">
+      <Switch>
+        <Route path="/">
+          <Home data={landingPageData}></Home>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
