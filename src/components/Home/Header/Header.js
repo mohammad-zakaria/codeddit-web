@@ -13,11 +13,10 @@ const Header = (props) => {
                     <span></span>
                   </h1>
                   <p>{props.data ? props.data.paragraph : 'Loading'}</p>
-                  <a
-                    href='#features'
+                  <a onclick="window.open(this.href,'_blank');return false;" href="https://play.google.com/store/apps/details?id=com.codedditapp.codeddit"
                     className='btn btn-custom btn-lg page-scroll'
                   >
-                    Learn More
+                    Install App
                   </a>{' '}
                 </div>
               </div>
